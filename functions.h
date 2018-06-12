@@ -10,6 +10,7 @@
 #include <stdio.h>
 
 int prime_n() {
+    // Print Prime no between 1 and n
     int i, j, n, flag = 1;
     printf("Enter Value of n  : \t ");
     scanf("%d", &n);
@@ -25,7 +26,23 @@ int prime_n() {
     return 0;
 }
 
-int print_it(char *array) {
-    printf("%s", &array[0]);
-    return 0;
+void reverse_string(char string[]) {
+    // function to print reverse of a string.
+    printf("Reverse of string is ");
+    int i = 0;
+    while (string[i] != '\0') {
+        i++;
+    }
+    int length = i;
+    char reverse[length + 1];
+    i = 0;
+    while (string[i] != '\0') {
+        reverse[length - i] = string[i];
+        i++;
+        if (i == length) {
+            reverse[length + 1] = '\0';
+        }
+    }
+    reverse[0] = ' ';
+    printf(reverse);
 }

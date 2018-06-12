@@ -3,4 +3,4 @@ project(test C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(test main.c functions.h)
+add_executable(c_programs main.c functions.h)

@@ -1,8 +1,9 @@
-// Program to print
-#include <stdio.h>
+// Program to print reverse of a string
 #include "functions.h"
+#include <stdio.h>
+
 
 int main() {
-    prime_n();
+    reverse_string("Hello World");
     return 0;
 }
