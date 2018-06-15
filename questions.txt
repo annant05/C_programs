@@ -1,9 +1,9 @@
-1 : WAP to find the reverse of a string without using string.h
-
-
+1 : WAP to find the reverse of a string without using string.h  // use swapping concept
+2 : WAP to check given program is palindrome or not
+3 : WAP to reverse a given no
 
 5 : WAP to find factorial of a given no
-6 : WAP to find factorial of a given no using recursion  // need to work on logics
+6 : WAP to find factorial of a given no using recursion  // need to work on logic
 
 
 9: WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1

@@ -1,9 +1,11 @@
 // Program to print reverse of a string
 #include "functions.h"
 #include <stdio.h>
-#include <stdlib.h>
+
+#define TRUE 1;
+#define FALSE 0;
 
 int main() {
-    is_prime(23);
+    
     return 0;
 }

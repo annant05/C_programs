@@ -7,7 +7,11 @@
 
 #endif //TEST_FUNCTIONS_H
 
+
 #include <stdio.h>
+
+#define TRUE 1;
+#define FALSE 0;
 
 int prime_n() {  // Print Prime no between 1 and n
     int i, j, n, flag = 1;
@@ -62,7 +66,7 @@ long int factorial_rec(long int n) { // factorial using recursion
         return (n * factorial_rec(n - 1));
 }
 
-void is_prime(int n) {
+void is_prime(int n) { // is the no prime
     int flag = 0;
 
     for (int i = 2; i <= n / 2; i++) {
@@ -73,3 +77,57 @@ void is_prime(int n) {
     if (!flag) { printf("%d   : Is a Prime No", n); }
     else { printf("%d   : Is not a Prime No", n); }
 }
+
+void reverse_string_using_swap() {  // Special thanks to Aadarsh Sharma for this logic
+
+    char string[20];
+    printf("Reverse of a string \n");
+    printf("Please enter the string  : ");
+    gets(string);
+    int len = 0;
+    while (string[len] != '\0') { len++; }
+    len--;
+    for (int i = 0; i <= len / 2; i++) {
+        char temp = string[len - i];
+        string[len - i] = string[i];
+        string[i] = temp;
+
+    }
+    printf("String is :  %s", string);
+}
+
+void is_palindrome() { //  given string is palindrome or not
+    char string[20];
+    printf("Enter a string :  ");
+    gets(string);
+    int len = 0;
+    while (string[len] != '\0') { len++; }
+    len--;
+    int palindrome = TRUE;
+    for (int i = 0; i <= len / 2; i++) {
+        if (string[i] != string[len - i]) {
+            palindrome = FALSE;
+            break;
+        }
+    }
+    if (palindrome) {
+        printf("%s   : is a palindrome ", string);
+    } else {
+        printf("%s   : is not a palindrome ", string);
+    }
+}
+
+
+void reverse_of_a_no() { // To reverse a no
+    long int number;
+    printf("Enter the no  : ");
+    scanf("%li", &number);
+    long int rev = 0;
+    while (number != 0) {
+        rev = rev * 10 + number % 10;
+        number = number / 10;
+    }
+    printf("\n Reverse of %li  is :  %li", number, rev);
+}
+
+
