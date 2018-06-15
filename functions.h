@@ -13,7 +13,7 @@
 #define TRUE 1;
 #define FALSE 0;
 
-int prime_n() {  // Print Prime no between 1 and n
+int prime_n() {  // Print Prime no between 1 and n    // EXTRA
     int i, j, n, flag = 1;
     printf("Enter Value of n  : \t ");
     scanf("%d", &n);
@@ -50,7 +50,7 @@ void reverse_string(char string[]) { // function to print reverse of a string.
 }
 
 
-long int fact_loop(long int n) { // factorial using loop
+long int fact_loop(long int n) { // factorial using loop   // Q-5
     long int fact = 1;
     for (int i = n; i >= 1; i--) {
         fact = fact * i;
@@ -59,7 +59,7 @@ long int fact_loop(long int n) { // factorial using loop
 }
 
 
-long int factorial_rec(long int n) { // factorial using recursion
+long int factorial_rec(long int n) { // factorial using recursion  //Q-6
     if (n == 0)
         return 1;
     else
@@ -78,7 +78,8 @@ void is_prime(int n) { // is the no prime
     else { printf("%d   : Is not a Prime No", n); }
 }
 
-void reverse_string_using_swap() {  // Special thanks to Aadarsh Sharma for this logic
+void
+reverse_string_using_swap() {  // Special thanks to Aadarsh Sharma for this logic of swapping two ends of the string     //Q-1
 
     char string[20];
     printf("Reverse of a string \n");
@@ -96,7 +97,7 @@ void reverse_string_using_swap() {  // Special thanks to Aadarsh Sharma for this
     printf("String is :  %s", string);
 }
 
-void is_palindrome() { //  given string is palindrome or not
+void is_palindrome() { //  given string is palindrome or not  // Q-2
     char string[20];
     printf("Enter a string :  ");
     gets(string);
@@ -118,7 +119,7 @@ void is_palindrome() { //  given string is palindrome or not
 }
 
 
-void reverse_of_a_no() { // To reverse a no
+void reverse_of_a_no() { // To reverse a no   //Q-3
     long int number;
     printf("Enter the no  : ");
     scanf("%li", &number);
@@ -130,7 +131,7 @@ void reverse_of_a_no() { // To reverse a no
     printf("\n Reverse of %li  is :  %li", number, rev);
 }
 
-int power(int number, int exponent) {   // TO find power of a number using recursion
+int power(int number, int exponent) {   // TO find power of a number using recursion   //Q-12
     if (exponent == 0) {
         return 1;
     } else {
@@ -138,7 +139,7 @@ int power(int number, int exponent) {   // TO find power of a number using recur
     }
 }
 
-void swap_without_temp() {     // to swap two numbers without using temp variable
+void swap_without_temp() {     // to swap two numbers without using temp variable   //Q-16
     int no1, no2;
     printf("Enter no 1 and no 2  : ");
     scanf("%d%d", &no1, &no2);
@@ -147,4 +148,87 @@ void swap_without_temp() {     // to swap two numbers without using temp variabl
     no2 = no1 - no2;
     no1 = no1 - no2;
     printf("no after swapping  : no1 = %d  :  no2 = %d\n", no1, no2);
+}
+
+
+void student_division() {  // Print student Division according to marks  // Q-30
+    int marks;
+    printf("Enter the marks of the student :  ");
+    scanf("%d", &marks);
+    if (marks >= 60) printf("Student PASSED with FIRST Division  Marks : %d", marks);
+    else if (marks >= 50 && marks < 60) printf("Student PASSED with SECOND Division  Marks : %d", marks);
+    else if (marks >= 40 && marks < 50) printf("Student PASSED with THIRD Division  Marks : %d", marks);
+    else if (marks < 40) printf("Student has FAILED!  Marks : %d", marks);
+}
+
+void linear_search_using_loop() { // linear search using loop // Q-19
+    int noOfElements, search;
+    printf("Enter no of elements : ");
+    scanf("%d", &noOfElements);
+    int elements[noOfElements];
+    printf("Enter elements in array  ");
+    for (int i = 0; i < noOfElements; i++) {
+        printf("Enter element  %d:  ", i + 1);
+        scanf("%d", &elements[i]);
+    }
+    printf("Enter the element to search : ");
+    scanf("%d", &search);
+    int found = FALSE;
+    for (int i = 0; i < noOfElements; i++) {
+        if (search == elements[i]) {
+            printf("Search element %d found at position : %d ", search, i + 1);
+            found = TRUE;
+            break;
+        }
+    }
+    if (!found) {
+        printf("Search element %d is not in the list ", search);
+    }
+
+}
+
+
+int print_1_n(int n) {  // not yet completed   // Q-97
+
+    if (n == 1) {
+        printf("\n%d", 1);
+        return 1;
+    } else {
+        printf("\n%d", n);
+        print_1_n(n - 1);
+    }
+
+};
+
+void print_hello_without_semicolon_92() {
+    if (printf("Hello World")) { ;
+    }
+}
+
+
+void largest_and_second_largest_in_list() {     // Largest element in a given list : // Q - 82   // Second largest in a given list //Q-
+    int n;
+    printf("Enter no of elements  : ");
+    scanf("%d", &n);
+    int list[n];
+    for (int i = 0; i < n; i++) {
+        printf("Enter element  %d : ", i + 1);
+        scanf("%d", &list[i]);
+    }
+    int largest = list[0];
+    for (int i = 1; i < n; i++) {
+        if (largest <= list[i]) {
+            largest = list[i];
+        }
+    }
+    int seclargest = 0;
+    for (int i = 1; i < n; i++) {
+        if (list[i] != largest && seclargest <= list[i]) {
+            seclargest = list[i];
+        }
+    }
+
+    printf("Largest element in the array is  :%d ", largest);
+    printf("\nSecond Largest element in the array is  :%d ", seclargest);
+
 }

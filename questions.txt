@@ -1,8 +1,8 @@
-1 : WAP to find the reverse of a string without using string.h  // use swapping concept
-2 : WAP to check given program is palindrome or not
+1 : WAP to find the reverse of a string without using string.h  // done use swapping concept
+2 : WAP to check given program is palindrome or not  // done
 3 : WAP to reverse a given no
 
-5 : WAP to find factorial of a given no
+5 : WAP to find factorial of a given no  // Done
 6 : WAP to find factorial of a given no using recursion  // need to work on logic
 
 
@@ -13,4 +13,85 @@
 
 
 
-WAP to swap two values without using temporary variable
+16: WAP to swap two values without using temporary variable
+
+
+19: WAP to implement linear search without using recursion
+
+
+
+
+
+
+
+
+
+
+30: Write a program to print the grade of a following student as follows :  if m> 60 = first ; if m>=50 and m<60 = Second ; if m>=40 and m<50 = third ; if m<40 = Failed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+82:  WAP to find largest element of an array
+83: WAP to find second largest element in an array
+
+
+
+
+
+
+
+
+92: C program to print hello world without using semicolon // done
+
+
+
+
+97: Program in c to print 1 to 100 without using loop   // Not yet done
