@@ -7,3 +7,10 @@
 
 
 9: WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1
+
+
+12: WAP to find power(a,b) using recursion
+
+
+
+WAP to swap two values without using temporary variable

@@ -130,4 +130,21 @@ void reverse_of_a_no() { // To reverse a no
     printf("\n Reverse of %li  is :  %li", number, rev);
 }
 
+int power(int number, int exponent) {   // TO find power of a number using recursion
+    if (exponent == 0) {
+        return 1;
+    } else {
+        return number * power(number, exponent - 1);
+    }
+}
 
+void swap_without_temp() {     // to swap two numbers without using temp variable
+    int no1, no2;
+    printf("Enter no 1 and no 2  : ");
+    scanf("%d%d", &no1, &no2);
+    printf("no before swapping : no1 = %d  :  no2 = %d\n", no1, no2);
+    no1 = no1 + no2;
+    no2 = no1 - no2;
+    no1 = no1 - no2;
+    printf("no after swapping  : no1 = %d  :  no2 = %d\n", no1, no2);
+}
