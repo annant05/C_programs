@@ -2,6 +2,8 @@
 // Created by Annant Gupta on 6/11/2018.
 //
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #ifndef TEST_FUNCTIONS_H
 #define TEST_FUNCTIONS_H
 
@@ -206,7 +208,8 @@ void print_hello_without_semicolon_92() {
 }
 
 
-void largest_and_second_largest_in_list() {     // Largest element in a given list : // Q - 82   // Second largest in a given list //Q-
+void
+largest_and_second_largest_in_list() {     // Largest element in a given list : // Q - 82   // Second largest in a given list //Q-
     int n;
     printf("Enter no of elements  : ");
     scanf("%d", &n);
@@ -232,3 +235,39 @@ void largest_and_second_largest_in_list() {     // Largest element in a given li
     printf("\nSecond Largest element in the array is  :%d ", seclargest);
 
 }
+
+void greatest_common_divisor() {  // Greatest common divisor   //
+    int no_1, no_2, GCD = 0;
+    int greater_no;
+    printf("Enter No 1 and No 2   : ");
+    scanf("%d%d", &no_1, &no_2);
+    greater_no = (no_1 > no_2) ? no_1 : no_2;
+    for (int i = 2; i <= greater_no; i++) {
+        if (no_1 % i == 0 && no_2 % i == 0) {
+            GCD = i;
+        }
+    }
+    printf("GCD  of %d and %d is : %d ", no_1, no_2, GCD);
+}
+
+void is_perfect_no() {
+    // WAP to check perfect no
+    int no, sum = 0;
+    printf("Enter the no to check : ");
+    scanf("%d", &no);
+
+    for (int i = 1; i <= no / 2; i++) {
+        if (no % i == 0) {
+            sum = sum + i;
+        }
+    }
+    if (sum == no) {
+        printf("%d   : is a perfect no", no);
+    } else {
+        printf("%d   : is not a perfect no", no);
+    }
+
+}
+
+
+#pragma clang diagnostic pop

@@ -5,7 +5,7 @@
 5 : WAP to find factorial of a given no  // Done
 6 : WAP to find factorial of a given no using recursion  // need to work on logic
 
-
+8: WAP that finds GDC of two given integers using recursion
 9: WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1
 
 
@@ -87,7 +87,7 @@
 
 
 
-
+90: C program for perfect no
 
 92: C program to print hello world without using semicolon // done
 
