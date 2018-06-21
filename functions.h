@@ -121,16 +121,18 @@ void is_palindrome() { //  given string is palindrome or not  // Q-2
 }
 
 
-void reverse_of_a_no() { // To reverse a no   //Q-3
-    long int number;
-    printf("Enter the no  : ");
-    scanf("%li", &number);
+int reverse_of_a_no(int number) { // To reverse a no   //Q-3
+    //long int number;
+//    printf("Enter the no  : ");
+    //  scanf("%li", &number);
     long int rev = 0;
     while (number != 0) {
         rev = rev * 10 + number % 10;
         number = number / 10;
     }
-    printf("\n Reverse of %li  is :  %li", number, rev);
+    return rev;
+    //printf("\n Reverse of %li  is :  %li", number, rev);
+
 }
 
 int power(int number, int exponent) {   // TO find power of a number using recursion   //Q-12
@@ -208,8 +210,8 @@ void print_hello_without_semicolon_92() {
 }
 
 
-void
-largest_and_second_largest_in_list() {     // Largest element in a given list : // Q - 82   // Second largest in a given list //Q-
+void larg_and_second_larg() {
+    // Largest element in a given list : // Q - 82   // Second largest in a given list //Q-
     int n;
     printf("Enter no of elements  : ");
     scanf("%d", &n);
@@ -267,6 +269,70 @@ void is_perfect_no() {
         printf("%d   : is not a perfect no", no);
     }
 
+}
+
+void is_armstrong_no(int n) {
+    // Program to check armstrong no;
+    int sum = 0;
+    //printf("Enter the no to check armstrong : ");
+    //  scanf("%d", &n);
+    int count = 0;
+    int no = n;
+    while (no != 0) {
+        no = no / 10;
+        count++;
+    }
+    no = n;
+    for (int i = 1; i <= count; i++) {
+        sum = sum + power(no % 10, count);
+        no = no / 10;
+    }
+    if (sum == n) {
+        printf("\n%d  : is an armstrong no", n);
+    } else {
+        printf("%d  : is not an armstrong no", n);
+    }
+}
+
+void binary_to_decimal() {
+    // convert binary to decimal
+    int binary;
+    printf("Enter the binary ");
+    scanf("%d", &binary);
+    int n = binary;
+    int decimal = 0;
+    int i = 0;
+    while (n != 0) {
+        decimal = decimal + (n % 10) * power(2, i);
+        i++;
+        n = n / 10;
+    }
+
+    printf("binary : %d   \n decimal : %d", binary, decimal);
+}
+
+
+void decimal_to_binary() {
+    //  convert decimal to binary
+    int binary[15];
+    int no = 0;
+    printf("Enter decimal no : ");
+    scanf("%d", &no);
+    int i = 0;
+    while (no != 0) {
+        binary[i] = no%2 ? 1 : 0;
+//        if (no % 2 == 0) {
+//            binary[i] = 0;
+//        } else {
+//            binary[i] = 1;
+//        }
+        no = no / 2;
+        i++;
+    }
+    printf("binary is : ");
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
 }
 
 

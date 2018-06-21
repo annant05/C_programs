@@ -1,5 +1,5 @@
 // Program to print reverse of a string
-//#include "functions.h"
+#include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,6 +17,6 @@
 
 
 int main() {
-
+    decimal_to_binary();
     return 0;
 }
