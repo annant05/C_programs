@@ -17,6 +17,6 @@
 
 
 int main() {
-    decimal_to_binary();
+    hexadecimal_to_decimal();
     return 0;
 }
