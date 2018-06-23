@@ -1,13 +1,14 @@
 1 : WAP to find the reverse of a string without using string.h  // done use swapping concept
 2 : WAP to check given program is palindrome or not  // done
 3 : WAP to reverse a given no
-
+4 : WAP to print fibonacci sequence till n-th term
 5 : WAP to find factorial of a given no  // Done
 6 : WAP to find factorial of a given no using recursion  // need to work on logic
-
-8: WAP that finds GDC of two given integers using recursion
-9: WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1
-
+7 : WAP to print fibonacci series using recursion
+8 : WAP that finds GDC of two given integers using recursion
+9 : WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1
+10: WAP to function to interchange two integer values using call by value technique
+11: WAP to function to interchange two integer values using call by reference technique
 
 12: WAP to find power(a,b) using recursion
 
@@ -37,7 +38,7 @@
 
 
 
-
+40: Program to check armstrong no
 
 
 
@@ -86,7 +87,7 @@
 
 
 
-
+89: C program for Strong no
 90: C program for perfect no
 
 92: C program to print hello world without using semicolon // done
@@ -95,3 +96,6 @@
 
 
 97: Program in c to print 1 to 100 without using loop   // Not yet done
+
+99: C program to convert digits of a no into words;
+100: WAP to convert decimal number to octal number  ;

@@ -16,7 +16,7 @@
 #define FALSE 0;
 
 int prime_n() {  // Print Prime no between 1 and n    // EXTRA
-    int i, j, n, flag = 1;
+    int i, j, n, flag;
     printf("Enter Value of n  : \t ");
     scanf("%d", &n);
     for (i = 1; i <= n; i++) {
@@ -31,7 +31,7 @@ int prime_n() {  // Print Prime no between 1 and n    // EXTRA
     return 0;
 }
 
-void reverse_string(char string[]) { // function to print reverse of a string.
+void reverse_string(const char string[]) { // function to print reverse of a string.
     printf("Reverse of string is ");
     int i = 0;
     while (string[i] != '\0') {
@@ -61,8 +61,8 @@ long int fact_loop(long int n) { // factorial using loop   // Q-5
 }
 
 
-long int factorial_rec(long int n) { // factorial using recursion  //Q-6
-    if (n == 0)
+int factorial_rec(int n) { // factorial using recursion  //Q-6
+    if (!n)
         return 1;
     else
         return (n * factorial_rec(n - 1));
@@ -376,7 +376,7 @@ void decimal_to_hexadecimal() {
     scanf("%d", &no);
     int i = 0;
     while (no != 0) {
-        int temp = no % 16 ?  /* false */ no % 16 :   /* true */  0;
+        int temp = no % 16 ?  /* true expression */ no % 16 :   /* false expression*/  0;
         // above line means that if no%16==0 then return 0 otherwise return remainder
         hexadecimal[i] = (char) (temp <= 10 ? (48 + temp) : (55 + temp));//very important
         // above line if temp is less than 9 then return from no 0 to 9
@@ -413,6 +413,52 @@ void hexadecimal_to_decimal() {
 
     printf("decimal is : ");
     printf("%d", decimal);
+}
+
+void is_strong_no() {
+// program to check weather a no is strong or not;
+    for (int j = 1; j <= 100000; j++) {
+        int no = j, n = j, sum = 0;
+        while (n != 0) {
+            sum = sum + factorial_rec(n % 10);
+            n = n / 10;
+        }
+        if (sum == no) {
+            printf("\n %d  is a strong no ", no);
+        }
+// } else {
+//            printf(" %d   : is  not a strong no : ", no);
+//        }
+    }
+}
+
+void fibonacci_loop() {
+    // Print fibonacci series
+    int no = 10, prev = 0, crnt = 1, next = 0;
+    printf("Enter Fibonacci series : ");
+    scanf("%d", &no);
+    for (int i = 0; i <= no; i++) {
+        printf("%d ", next);
+        prev = crnt;
+        crnt = next;
+        next = prev + crnt;
+    }
+}
+
+
+int fibo(int n) { // fibonacci get term function
+    if (n == 1 || n == 0) return n;
+    return fibo(n - 2) + fibo(n - 1);
+}
+
+void fibonacci_rec() {
+    // fibonacci using recursion
+    int n;
+    printf("Enter the range n : ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", fibo(i));
+    }
 }
 
 
