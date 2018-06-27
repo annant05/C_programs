@@ -9,7 +9,6 @@
 9 : WAP to check given no is prime or not  // remember that always (number % i ==0 )flag = 1
 10: WAP to function to interchange two integer values using call by value technique
 11: WAP to function to interchange two integer values using call by reference technique
-
 12: WAP to find power(a,b) using recursion
 
 
