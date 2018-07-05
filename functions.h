@@ -526,4 +526,40 @@ void stack_using_array() {
 }
 //Stack stop
 
+// concat Start
+char conc[100];
+
+char *concate(char *str1, char *str2) {
+    int slen(char *str) { // NOLINT
+        int len = 0;
+        while (str[len] != '\0') {
+            len++;
+        }
+        return len;
+    }
+    int len1 = slen(str1), len2 = slen(str2);
+    printf("\nString 1 len : %d", len1);
+    printf("\nString 2 len : %d", len2);
+
+    for (int i = 0; i <= len1 + len2; ++i) {
+        if (i < len1) conc[i] = str1[i];
+        else conc[i] = str2[i - len1];
+    }
+    return conc;
+}
+
+void string_conc_main() {
+    char str1[20];
+    char str2[20];
+    char *strcat;
+    //int len = 0;
+    printf("\nEnter String 1 : ");
+    gets(str1);
+    printf("\nEnter String 2 : ");
+    gets(str2);
+    strcat = concate(str1, str2);
+    printf("\nconcate String is :%s", strcat);
+}
+//concat End
+
 #pragma clang diagnostic pop

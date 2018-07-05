@@ -1,0 +1,105 @@
+//
+// Created by Annant Gupta on 05-Jul-18.
+//
+
+// Program to print reverse of a string
+//#include "functions.h"
+#include <stdio.h>
+#incxlude <string.h>
+//#include <stdlib.h>
+
+#define TRUE 1;
+#define FALSE 0;
+
+int front = -1, rear = -1, maxsize;
+
+void displayqueue(int queue[]) {
+    for (int i = front ; i <= rear; i++) {
+        printf("%d, ", queue[i]);
+    }
+}
+
+void insert(int queue[]) {
+    int item;
+    if (rear == maxsize - 1) {
+        printf("\n Queue is full  ");
+    } else {
+        if (front == -1) { front = 0; }
+        printf("Enter item to insert : ");
+        scanf("%d", &item);
+        rear++;
+        queue[rear] = item;
+
+    }
+}
+
+void delete(int queue[]) {
+    if (front == -1 || front > rear) {
+        printf("\nQueue is empty : ");
+        return;
+    } else {
+        printf("\nElement deleted :  %d", queue[front]);
+        front++;
+    }
+}
+
+void queue_using_array() {
+    printf("Enter size of queue : ");
+    scanf("%d", &maxsize);
+    int queue[maxsize];
+    int ch = 1;
+    while (ch) {
+        printf("\n1: insert \t 2: delete \t 0: Exit   : ");
+        scanf("%d", &ch);
+        switch (ch) {
+            case 1:
+                insert(queue);
+                break;
+            case 2:
+                delete(queue);
+                break;
+            case 0:
+                ch = 0;
+                break;
+            default:
+                continue;
+        }
+        displayqueue(queue);
+    }
+}
+
+int main() {
+    queue_using_array();
+    return 0;
+}
+
+
+
+
+//    int a, b;
+//    printf("\nEnter no 1 : ");
+//    scanf("%d", &a);
+//    printf("\nEnter no 2 : ");
+//    scanf("%d", &b);
+//    printf("\na = %d  : b = %d ", a, b);
+//    swap(&a, &b);
+//    printf("\na = %d  : b = %d ", a, b);
+//    return 0;
+//}
+
+
+//
+//void swap_by_value(int var1, int var2) {
+//    int temp = var1;
+//    var1 = var2;
+//    var2 = temp;
+//    printf("Swap Complete  %d  %d ", var1, var2);
+//}
+//
+//void swap(const int *var1, const int *var2) {
+//    const int *temp;
+//    temp = var1;
+//    var1 = var2;
+//    var2 = temp;
+//}
+
