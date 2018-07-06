@@ -562,4 +562,92 @@ void string_conc_main() {
 }
 //concat End
 
+//concat short and simple
+
+void strcatt() {
+    char s1[100], s2[100], i, j;
+
+    printf("Enter first string: ");
+    gets(s1);
+    printf("Enter second string: ");
+    gets(s2);
+
+// calculate the length of string s1
+// and store it in i
+    for (i = 0; s1[i] != '\0'; ++i);
+
+    for (j = 0; s2[j] != '\0'; ++j, ++i) {
+        s1[i] = s2[j];
+    }
+
+    s1[i] = '\0';   ////Important line
+    printf("After concatenation: %s", s1);
+
+}
+
+//concat end ;
+
+
+
+//change string case
+
+
+void strupr() {
+    char string[100];
+    printf("Enter the string   : ");
+    gets(string);
+
+    for (int i = 0; string[i] != '\0'; ++i) {
+        if (string[i] >= 97 && string[i] <= 122)
+            string[i] = (char) (string[i] - 32);
+    }
+
+    printf("String in upper case is :  %s", string);
+}
+
+void strlow() {
+    char string[100];
+    printf("Enter the string   : ");
+    gets(string);
+
+    for (int i = 0; string[i] != '\0'; ++i) {
+        if (string[i] >= 65 && string[i] <= 90)
+            string[i] = (char) (string[i] + 32);
+    }
+
+    printf("String in lower case is :  %s", string);
+}
+
+void strchangecase() {
+    char string[100];
+    printf("Enter the string   : ");
+    gets(string);
+
+    for (int i = 0; string[i] != '\0'; ++i) {
+        if (string[i] >= 65 && string[i] <= 90)
+            string[i] = (char) (string[i] + 32);
+        else if (string[i] >= 97 && string[i] <= 122)
+            string[i] = (char) (string[i] - 32);
+    }
+
+    printf("String in changed case is :  %s", string);
+}
+
+// change string case end
+
+//string revese once again ;
+void strrev() {
+    char string[100];
+    int len;
+    printf("Enter the string to reverse  : ");
+    gets(string);
+    for (len = 0; string[len] != '\0'; len++);
+    for (int i = 0; i < len / 2; ++i) {
+        char temp = string[i];
+        string[i] = string[len - i - 1];
+        string[len - i - 1] = temp;
+    }
+    printf("Reverse of the string is  :  %s", string);
+}
+
 #pragma clang diagnostic pop

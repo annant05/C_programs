@@ -1,17 +1,9 @@
-//#include "functions.h"
 #include <stdio.h>
 
-#define TRUE 1;
-#define FALSE 0;
 
 
 
 int main() {
-    // program to add two strings
+    strrev();
     return 0;
 }
-
-
-
-
-
