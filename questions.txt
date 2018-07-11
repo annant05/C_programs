@@ -11,13 +11,13 @@
 11: WAP to function to interchange two integer values using call by reference technique
 12: WAP to find power(a,b) using recursion
 
-
+14: WAP to find GCD of the given 2 numbers
 
 16: WAP to swap two values without using temporary variable
-
+17: WAP to check the given  year is leap or not
 
 19: WAP to implement linear search without using recursion
-
+20:
 
 
 
