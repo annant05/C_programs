@@ -1,14 +1,16 @@
 #include <stdio.h>
+#include "general.h"
+#include "general_math.h"
+#include "sorting.h"
+#include "searching.h"
+#include "stringop.h"
+#include "data_structure.h"
+
 
 #define TRUE 1;
 #define FALSE 0;
 
-
 int main() {
-    int year = 1;
-    while (year > 0) {
-        scanf("%d", &year);
-        is_leap_year(year);
-    }
+    bubble_sort();
     return 0;
 }

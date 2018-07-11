@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 
+#define TRUE 1;
+#define FALSE 0;
+
 // stack Start
 int MAXSIZE;
 int tos = -1;

@@ -2,11 +2,15 @@
 // Created by Annant Gupta on 11-Jul-18.
 //
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #ifndef TEST_SEARCHING_H
 #define TEST_SEARCHING_H
 
 
 #include <stdio.h>
+#define TRUE 1;
+#define FALSE 0;
 
 void linear_search_using_loop() { // linear search using loop // Q-19
     int noOfElements, search;
@@ -36,3 +40,5 @@ void linear_search_using_loop() { // linear search using loop // Q-19
 
 
 #endif //TEST_SEARCHING_H
+
+#pragma clang diagnostic pop

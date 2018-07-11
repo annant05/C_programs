@@ -19,7 +19,7 @@
 19: WAP to implement linear search without using recursion
 20:
 
-
+22: WAF to sort 1D array using bubble sort
 
 
 

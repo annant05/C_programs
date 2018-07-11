@@ -44,10 +44,6 @@ void print_hello_without_semicolon_92() {
 }
 
 
-
-
-
-
 void is_leap_year(int year) {
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
         printf("%d is a leap year ", year);

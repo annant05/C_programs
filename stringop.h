@@ -8,6 +8,8 @@
 #define TEST_STRINGOP_H
 
 #include <stdio.h>
+#define TRUE 1;
+#define FALSE 0;
 
 void reverse_string(const char string[]) { // function to print reverse of a string.
     printf("Reverse of string is ");

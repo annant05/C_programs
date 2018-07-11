@@ -2,11 +2,16 @@
 // Created by Annant Gupta on 11-Jul-18.
 //
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #ifndef TEST_CONVERSTION_H
 #define TEST_CONVERSTION_H
 
 
 #include <stdio.h>
+#include "general_math.h"
+#define TRUE 1;
+#define FALSE 0;
 
 void binary_to_decimal() {
     // convert binary to decimal
@@ -131,3 +136,5 @@ void hexadecimal_to_decimal() {
 
 
 #endif //TEST_CONVERSTION_H
+
+#pragma clang diagnostic pop

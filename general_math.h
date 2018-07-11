@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 
+#define TRUE 1;
+#define FALSE 0;
+
 int power(int number, int exponent) {   // TO find power of a number using recursion   //Q-12
     if (exponent == 0) {
         return 1;
