@@ -5,12 +5,15 @@
 #include "searching.h"
 #include "stringop.h"
 #include "data_structure.h"
+#include "array_2d.h"
 
 
 #define TRUE 1;
 #define FALSE 0;
 
+
+
 int main() {
-    sum_dig_of_int();
+    aray_mul();
     return 0;
 }

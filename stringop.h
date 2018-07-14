@@ -8,6 +8,7 @@
 #define TEST_STRINGOP_H
 
 #include <stdio.h>
+
 #define TRUE 1;
 #define FALSE 0;
 
@@ -194,6 +195,15 @@ void strrev() {
     printf("Reverse of the string is  :  %s", string);
 }
 
+
+int slen_ptr(char *str) {
+    int len = 0;
+    while (*str != '\0') {
+        len++;
+        str++;
+    }
+    return len;
+}
 
 #endif //TEST_STRINGOP_H
 

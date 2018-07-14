@@ -24,20 +24,20 @@
 24:
 
 26:WAP to find both largest and smallest number of an array of integers
-
+27:
 
 29: WAP to convert a string into its opposite case
 30: Write a program to print the grade of a following student as follows :  if m> 60 = first ; if m>=50 and m<60 = Second ; if m>=40 and m<50 = third ; if m<40 = Failed
 31: WAP to find sum of individual digits of a positive integer
+32: WAP for matrix multiplication by checking compatibility. -> working on it
 
 
 
+36: Take a string as an argument and return its length. using pointers.
 
 
 
-
-
-40: Program to check armstrong no
+40: Program to check armstrong no or not
 
 
 
