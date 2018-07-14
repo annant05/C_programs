@@ -52,5 +52,19 @@ void is_leap_year(int year) {
 
 }
 
+void sum_dig_of_int() {
+
+    int n;
+    printf("enter the no : ");
+    scanf("%d", &n);
+    int sum = 0;
+    while (n != 0) {
+        sum = sum + n % 10;
+        n = n / 10;
+    }
+    printf("Sum of digits is : %d", sum);
+
+}
+
 
 #pragma clang diagnostic pop

@@ -11,6 +11,6 @@
 #define FALSE 0;
 
 int main() {
-    bubble_sort();
+    sum_dig_of_int();
     return 0;
 }
