@@ -61,21 +61,20 @@ int binary_search() {
     printf("enter element to search :");
     scanf("%d", &item);
 
-    //printf("%d", binary_rec(0, n, list, item));
     int L = 0, R = n - 1, mid = 0;
+
     while (L <= R) {
-        mid = (L + R / 2);
+        mid = (L + R) / 2;
         if (list[mid] == item) {
             printf("Item Found at %d  ", mid + 1);
             return mid + 1;
-        }
-        if (list[mid] < item) {
+        } else if (list[mid] < item) {
             L = mid + 1;
         } else {
             R = mid - 1;
         }
     }
-    return 0;
+    return -1;
 
 }
 
@@ -88,9 +87,7 @@ void call() {
     int item;
     printf("enter element to search :");
     scanf("%d", &item);
-
     printf("element found at : %d", binary_rec(0, n, list, item));
-
 }
 
 int lin_rec(int list[], int item, int n) {
@@ -112,9 +109,7 @@ void lin_call() {
     int item;
     printf("enter element to search :");
     scanf("%d", &item);
-
     printf(" element found at: %d  ", lin_rec(list, item, n));
-
 }
 
 #endif //TEST_SEARCHING_H

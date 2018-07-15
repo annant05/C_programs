@@ -11,6 +11,7 @@
 
 
 #include <stdio.h>
+#include "general_math.h"
 
 #define TRUE 1;
 #define FALSE 0;
@@ -66,5 +67,17 @@ void sum_dig_of_int() {
 
 }
 
+void pascal() {
+    int i, n, c;
+    printf("Enter the number of rows\n");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) {
+        for (c = 0; c <= (n - i - 2); c++) { printf(" "); }
+        for (c = 0; c <= i; c++) {
+            printf("%ld ", fact_loop(i) / (fact_loop(c) * fact_loop(i - c)));
+        }
+        printf("\n");
+    }
+}
 
 #pragma clang diagnostic pop

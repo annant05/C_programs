@@ -11,9 +11,8 @@
 #define TRUE 1;
 #define FALSE 0;
 
-
-
 int main() {
-    aray_mul();
+    char str[] = "GUPTA";
+    printf("The length of string %s is : %d", str, str_len(str));
     return 0;
 }

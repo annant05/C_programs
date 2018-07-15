@@ -65,18 +65,18 @@ int prime_n() {  // Print Prime no between 1 and n    // EXTRA
 
 long int fact_loop(long int n) { // factorial using loop   // Q-5
     long int fact = 1;
-    for (int i = n; i >= 1; i--) {
+    for (long int i = n; i >= 1; i--) {
         fact = fact * i;
     }
     return fact;
 }
 
 
-int factorial_rec(int n) { // factorial using recursion  //Q-6
+int factorial_loop(int n) { // factorial using recursion  //Q-6
     if (!n)
         return 1;
     else
-        return (n * factorial_rec(n - 1));
+        return (n * factorial_loop(n - 1));
 }
 
 void is_prime(int n) { // is the no prime
@@ -85,6 +85,7 @@ void is_prime(int n) { // is the no prime
     for (int i = 2; i <= n / 2; i++) {
         if (n % i == 0) {
             flag = 1;
+            break;
         }
     }
     if (!flag) { printf("%d   : Is a Prime No", n); }
@@ -153,7 +154,7 @@ void is_strong_no() {
     for (int j = 1; j <= 100000; j++) {
         int no = j, n = j, sum = 0;
         while (n != 0) {
-            sum = sum + factorial_rec(n % 10);
+            sum = sum + factorial_loop(n % 10);
             n = n / 10;
         }
         if (sum == no) {
@@ -194,6 +195,12 @@ void fibonacci_rec() {
     }
 }
 
+int GCD_rec(int n1, int n2) {
+    if (n2 != 0)
+        return GCD_rec(n2, n1 % n2);
+    else
+        return n1;
+}
 
 #endif //TEST_GENERAL_MATH_H
 

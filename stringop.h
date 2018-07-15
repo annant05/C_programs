@@ -205,6 +205,16 @@ int slen_ptr(char *str) {
     return len;
 }
 
+
+int str_len(char *str) {
+    int len = 0;
+    while (*str != '\0') {
+        str++;
+        len++;
+    }
+    return len;
+}
+
 #endif //TEST_STRINGOP_H
 
 #pragma clang diagnostic pop
