@@ -215,6 +215,53 @@ int str_len(char *str) {
     return len;
 }
 
+void copy_string(char *str, char *copy) {
+    while (*str) {
+        *copy = *str;
+        str++;
+        copy++;
+    }
+    *copy = '\0';
+}
+
+
+void str_cmp(char *str1, char *str2) {
+    char *s1 = str1;
+    char *s2 = str2;
+//    int len1 = str_len(str1), len2 = str_len(str2);
+    int diff = 0;
+    for (int i = 0; *str1 != '\0' || *str2 != '\0'; ++i) {
+        diff = diff + (*str1 - *str2);
+        str1++;
+        str2++;
+    }
+    if (!diff) {
+        printf("Strings %s and %s are identical :%d", s1, s2, diff);
+    } else {
+        printf("Strings %s and %s are not identical :%d", s1, s2, diff);
+    }
+}
+
+void str_sort(char *str) {
+    printf("%s:%d", str, str_len(str));
+    int len = str_len(str);
+    char s1[len];
+    char *s2 = str;
+    for (int i = 0; i < len; ++i) {
+        s1[i] = *s2++;
+    }
+    s1[len] = '\0';
+    for (int i = 0; i < len; ++i) {
+        for (int j = i + 1; j < len; ++j) {
+            if (s1[i] >= s1[j]) {
+                swap_c(&s1[i], &s1[j]);
+            }
+        }
+    }
+    printf("\n%s:%d", s1, str_len(s1));
+}
+
+
 #endif //TEST_STRINGOP_H
 
 #pragma clang diagnostic pop

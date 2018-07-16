@@ -92,6 +92,13 @@ void is_prime(int n) { // is the no prime
     else { printf("%d   : Is not a Prime No", n); }
 }
 
+double sum_series(double n) {
+    double sum = 1;
+    for (double i = 1; i <= n; i++) {
+        sum = sum + (1.0 / i);
+    }
+    return sum;
+}
 
 void greatest_common_divisor() {  // Greatest common divisor   //
     int no_1, no_2, GCD = 0;
@@ -201,6 +208,14 @@ int GCD_rec(int n1, int n2) {
     else
         return n1;
 }
+
+
+double ncr(int n, int r) {
+    return (double) fact_loop(n) / (fact_loop(n - r) * fact_loop(r));
+}
+
+
+
 
 #endif //TEST_GENERAL_MATH_H
 

@@ -158,4 +158,74 @@ void aray_mul() {
 }
 
 
+void is_array_symmetric() {
+
+    printf("Enter no of rows and columns for Matrix 1 : ");
+    scanf("%d%d", &r, &c);
+    int mat[r][c];
+    printf("Enter array elements :");
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            printf("array[%d][%d]", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    printf("values in matrix:  \n");
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    if (r == c) {
+        int trans[r][c];
+        for (int i = 0; i < r; ++i)
+            for (int j = 0; j < c; ++j) {
+                trans[j][i] = mat[i][j];
+            }
+
+
+        printf("transpose:  \n");
+        for (int i = 0; i < r; ++i) {
+            for (int j = 0; j < c; ++j) {
+                printf("%d ", trans[i][j]);
+            }
+            printf("\n");
+        }
+
+        int symmetric = TRUE;
+        for (int k = 0; k < r; ++k) {
+            for (int i = 0; i < c; ++i) {
+                if (mat[k][i] != trans[k][i]) {
+                    symmetric = FALSE;
+                }
+            }
+        }
+        if (symmetric) {
+            printf("this is a symmetric matrix :  \n");
+            for (int i = 0; i < r; ++i) {
+                for (int j = 0; j < c; ++j) {
+                    printf("%d ", mat[i][j]);
+                }
+                printf("\n");
+            }
+        } else {
+            printf("this is not a symmetric matrix :  \n");
+            for (int i = 0; i < r; ++i) {
+                for (int j = 0; j < c; ++j) {
+                    printf("%d ", mat[i][j]);
+                }
+                printf("\n");
+            }
+        }
+    } else {
+        printf("It is not a square matrix : %d x %d ", r, c);
+    }
+
+}
+
+
+
+
 #endif //TEST_ARRAY_2D_H

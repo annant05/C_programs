@@ -40,6 +40,12 @@ void swap(int *no1, int *no2) {
     *no1 = *no2;
     *no2 = temp;
 }
+
+void swap_c(char *no1, char *no2) {
+    char temp = *no1;
+    *no1 = *no2;
+    *no2 = temp;
+}
 // boiler plate code end
 
 #endif //TEST_BOILERPLATE_H

@@ -12,7 +12,6 @@
 #define FALSE 0;
 
 int main() {
-    char str[] = "GUPTA";
-    printf("The length of string %s is : %d", str, str_len(str));
+    is_array_symmetric();
     return 0;
 }
