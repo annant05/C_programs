@@ -10,8 +10,13 @@ int main() {
     cout << "Unsorted Array:\t ";
     print_array(array, len);
 
+////    int destlen = 10;
+//    int destarr[len];
+//    cout << "\n\n\n\ndest Array:\t ";
+//    copyArray(array, len, destarr, destlen);
+
     //    execute sorting here
-    selection_sort(array, len);
+    insertionSort(array, len);
 
     cout << "Sorted Array:\t ";
     print_array(array, len);
